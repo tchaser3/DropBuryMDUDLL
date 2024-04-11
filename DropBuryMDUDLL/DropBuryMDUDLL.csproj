@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7A2BF7E-5675-4D48-B4E4-ED134E6DF02F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DropBuryMDUDLL</RootNamespace>
+    <AssemblyName>DropBuryMDUDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DropBuryCompletedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropBuryCompletedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DropBuryMDUClass.cs" />
+    <Compile Include="DropBuryTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropBuryTasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllOpenMDUDropOrdersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllOpenMDUDropOrdersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDropBuryCompleteByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDropBuryCompleteByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDropBuryCompletedByTechnicianIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDropBuryCompletedByTechnicianIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDropBuryCompletedByWorkOrderNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDropBuryCompletedByWorkOrderNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDropBuryTaskByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDropBuryTaskByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDropBuryTaskByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDropBuryTaskByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDropBuryTasksSortedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDropBuryTasksSortedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUCompletedByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUCompletedByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUCompletedByTechnicianIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUCompletedByTechnicianIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUCompletedByWorkOrderNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUCompletedByWorkOrderNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUTaskByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUTaskByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUTaskByTaskCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUTaskByTaskCodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUTaskByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUTaskByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMDUTasksSortedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMDUTasksSortedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDropBuryCompletedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertDropBuryCompletedEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDropBuryTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertDropBuryTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertMDUCompletedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertMDUCompletedEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertMDUTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertMDUTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MDUCompletedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MDUCompletedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MDUTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MDUTasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMDUTaskDescriptionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMDUTaskDescriptionEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMDUTaskPricedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMDUTaskPricedEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DropBuryCompletedDataSet.xsc">
+      <DependentUpon>DropBuryCompletedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DropBuryCompletedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DropBuryCompletedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DropBuryCompletedDataSet.xss">
+      <DependentUpon>DropBuryCompletedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DropBuryTasksDataSet.xsc">
+      <DependentUpon>DropBuryTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DropBuryTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DropBuryTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DropBuryTasksDataSet.xss">
+      <DependentUpon>DropBuryTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllOpenMDUDropOrdersDataSet.xsc">
+      <DependentUpon>FindAllOpenMDUDropOrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllOpenMDUDropOrdersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllOpenMDUDropOrdersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllOpenMDUDropOrdersDataSet.xss">
+      <DependentUpon>FindAllOpenMDUDropOrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryCompleteByDateRangeDataSet.xsc">
+      <DependentUpon>FindDropBuryCompleteByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryCompleteByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDropBuryCompleteByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDropBuryCompleteByDateRangeDataSet.xss">
+      <DependentUpon>FindDropBuryCompleteByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryCompletedByTechnicianIDDataSet.xsc">
+      <DependentUpon>FindDropBuryCompletedByTechnicianIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryCompletedByTechnicianIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDropBuryCompletedByTechnicianIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDropBuryCompletedByTechnicianIDDataSet.xss">
+      <DependentUpon>FindDropBuryCompletedByTechnicianIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryCompletedByWorkOrderNumberDataSet.xsc">
+      <DependentUpon>FindDropBuryCompletedByWorkOrderNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryCompletedByWorkOrderNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDropBuryCompletedByWorkOrderNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDropBuryCompletedByWorkOrderNumberDataSet.xss">
+      <DependentUpon>FindDropBuryCompletedByWorkOrderNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryTaskByDescriptionDataSet.xsc">
+      <DependentUpon>FindDropBuryTaskByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryTaskByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDropBuryTaskByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDropBuryTaskByDescriptionDataSet.xss">
+      <DependentUpon>FindDropBuryTaskByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryTaskByTaskIDDataSet.xsc">
+      <DependentUpon>FindDropBuryTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryTaskByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDropBuryTaskByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDropBuryTaskByTaskIDDataSet.xss">
+      <DependentUpon>FindDropBuryTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryTasksSortedDataSet.xsc">
+      <DependentUpon>FindDropBuryTasksSortedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDropBuryTasksSortedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDropBuryTasksSortedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDropBuryTasksSortedDataSet.xss">
+      <DependentUpon>FindDropBuryTasksSortedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUCompletedByDateRangeDataSet.xsc">
+      <DependentUpon>FindMDUCompletedByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUCompletedByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUCompletedByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUCompletedByDateRangeDataSet.xss">
+      <DependentUpon>FindMDUCompletedByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUCompletedByTechnicianIDDataSet.xsc">
+      <DependentUpon>FindMDUCompletedByTechnicianIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUCompletedByTechnicianIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUCompletedByTechnicianIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUCompletedByTechnicianIDDataSet.xss">
+      <DependentUpon>FindMDUCompletedByTechnicianIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUCompletedByWorkOrderNumberDataSet.xsc">
+      <DependentUpon>FindMDUCompletedByWorkOrderNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUCompletedByWorkOrderNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUCompletedByWorkOrderNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUCompletedByWorkOrderNumberDataSet.xss">
+      <DependentUpon>FindMDUCompletedByWorkOrderNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTaskByDescriptionDataSet.xsc">
+      <DependentUpon>FindMDUTaskByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTaskByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUTaskByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUTaskByDescriptionDataSet.xss">
+      <DependentUpon>FindMDUTaskByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTaskByTaskCodeDataSet.xsc">
+      <DependentUpon>FindMDUTaskByTaskCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTaskByTaskCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUTaskByTaskCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUTaskByTaskCodeDataSet.xss">
+      <DependentUpon>FindMDUTaskByTaskCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTaskByTaskIDDataSet.xsc">
+      <DependentUpon>FindMDUTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTaskByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUTaskByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUTaskByTaskIDDataSet.xss">
+      <DependentUpon>FindMDUTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTasksSortedDataSet.xsc">
+      <DependentUpon>FindMDUTasksSortedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMDUTasksSortedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMDUTasksSortedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMDUTasksSortedDataSet.xss">
+      <DependentUpon>FindMDUTasksSortedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDropBuryCompletedEntry.xsc">
+      <DependentUpon>InsertDropBuryCompletedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDropBuryCompletedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertDropBuryCompletedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertDropBuryCompletedEntry.xss">
+      <DependentUpon>InsertDropBuryCompletedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDropBuryTaskEntry.xsc">
+      <DependentUpon>InsertDropBuryTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDropBuryTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertDropBuryTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertDropBuryTaskEntry.xss">
+      <DependentUpon>InsertDropBuryTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMDUCompletedEntry.xsc">
+      <DependentUpon>InsertMDUCompletedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMDUCompletedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertMDUCompletedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertMDUCompletedEntry.xss">
+      <DependentUpon>InsertMDUCompletedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMDUTaskEntry.xsc">
+      <DependentUpon>InsertMDUTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMDUTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertMDUTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertMDUTaskEntry.xss">
+      <DependentUpon>InsertMDUTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="MDUCompletedDataSet.xsc">
+      <DependentUpon>MDUCompletedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MDUCompletedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MDUCompletedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MDUCompletedDataSet.xss">
+      <DependentUpon>MDUCompletedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MDUTasksDataSet.xsc">
+      <DependentUpon>MDUTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MDUTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MDUTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MDUTasksDataSet.xss">
+      <DependentUpon>MDUTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMDUTaskDescriptionEntry.xsc">
+      <DependentUpon>UpdateMDUTaskDescriptionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateMDUTaskDescriptionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateMDUTaskDescriptionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateMDUTaskDescriptionEntry.xss">
+      <DependentUpon>UpdateMDUTaskDescriptionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateMDUTaskPricedEntry.xsc">
+      <DependentUpon>UpdateMDUTaskPricedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateMDUTaskPricedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateMDUTaskPricedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateMDUTaskPricedEntry.xss">
+      <DependentUpon>UpdateMDUTaskPricedEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
